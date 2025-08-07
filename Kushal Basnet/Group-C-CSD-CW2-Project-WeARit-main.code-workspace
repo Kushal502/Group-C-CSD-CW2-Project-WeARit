@@ -1,7 +1,11 @@
 {
     "folders": [
         {
+<<<<<<< HEAD
             "path": "."
+=======
+            "path": "../WorkSpace"
+>>>>>>> 61090242c64a2356a5db3776a63407fece7ef83c
         }
     ]
 }
