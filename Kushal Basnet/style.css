@@ -7,21 +7,18 @@
     box-sizing: border-box;
 }
 body{
-   font-family: 'Poppins',
-   sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 a{
     text-decoration: none;
 }
 p{
-   font-size: 16px;
-   font-family: 'Inter',
-   sans-serif;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
 }
 .nav-item{
     font-size: 16px;
     font-weight: 500;
-    
 }
 .search-box input{
     border: none;
@@ -31,21 +28,17 @@ p{
     position: relative;
     font-size: 16px;
     font-style: italic;
-
-
 }
 .search img{
     position: absolute;
     top: 24px;
     margin-left: -40px;
-
-
 }
 .text-part{
     padding: 40px 60px;
 }
 .img-part{
-  padding: 0 30px;
+    padding: 0 30px;
 }
 .text-part h2{
     font-weight: bold;
@@ -53,15 +46,13 @@ p{
 }
 .text-part p{
     font-size: 16px;
-    font-family: 'Inter',
-    sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 29px;
 }
 .card-title{
     color: #1F1F1F;
     font-weight: 600;
     font-size: 20px;
-
 }
 .btn{
     background:#1F1F1F;
