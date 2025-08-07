@@ -1,0 +1,72 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Manrope&family=Montserrat:wght@400;600&family=Poppins:wght@500&family=Roboto:wght@500&family=Source+Sans+Pro:ital,wght@0,600;1,200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   font-family: 'Poppins',
+   sans-serif;
+}
+a{
+    text-decoration: none;
+}
+p{
+   font-size: 16px;
+   font-family: 'Inter',
+   sans-serif;
+}
+.nav-item{
+    font-size: 16px;
+    font-weight: 500;
+    
+}
+.search-box input{
+    border: none;
+    background: #f2f2f2;
+    padding: 7px 20px;
+    border-radius: 66px;
+    position: relative;
+    font-size: 16px;
+    font-style: italic;
+
+
+}
+.search img{
+    position: absolute;
+    top: 24px;
+    margin-left: -40px;
+
+
+}
+.text-part{
+    padding: 40px 60px;
+}
+.img-part{
+  padding: 0 30px;
+}
+.text-part h2{
+    font-weight: bold;
+    font-size: 46px;
+}
+.text-part p{
+    font-size: 16px;
+    font-family: 'Inter',
+    sans-serif;
+    line-height: 29px;
+}
+.card-title{
+    color: #1F1F1F;
+    font-weight: 600;
+    font-size: 20px;
+
+}
+.btn{
+    background:#1F1F1F;
+    color: #f2f2f2;
+}
+.btn:hover{
+    color: #8f8c8c;
+}
