@@ -61,3 +61,110 @@ p{
 .btn:hover{
     color: #8f8c8c;
 }
+
+
+/* =========================
+   WeARit Custom Styles
+   Advanced animations + Bootstrap enhancements
+   ========================= */
+
+/* Smooth scrolling for the whole site */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global font & colors */
+.navbar a.nav-link {
+  color: #000 !important;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar a.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #f8c146;
+  transition: width 0.3s ease;
+}
+
+.navbar a.nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar a.nav-link:hover {
+  color: #f8c146 !important;
+}
+
+/* Carousel animations */
+.carousel-item img {
+  animation: fadeInScale 1.5s ease;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Card hover effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons */
+.btn-dark {
+  background: #000;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+  background: #f8c146;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Basket / product animations */
+.product-item {
+  transition: all 0.3s ease;
+}
+
+.product-item:hover {
+  transform: scale(1.03);
+}
+
+/* Fade-in animation for sections */
+.fade-in {
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Form focus animation */
+input:focus, textarea:focus {
+  box-shadow: 0 0 8px #f8c146;
+  border-color: #f8c146;
+  outline: none;
+  transition: all 0.3s ease;
+}
