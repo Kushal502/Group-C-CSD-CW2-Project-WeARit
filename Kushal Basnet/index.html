@@ -6,28 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeARit</title>
     <link rel="shortcut icon" href="images/logo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Use the correct stylesheet and favicon path (merged resolution) -->
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/6eed86a2da.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- header code start -->
+    <!-- Header -->
     <header id="home">
-        <!-- navbar code start -->
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light py-3 bg-white fixed-top">
             <div class="container d-flex justify-content-between">
-                <a class="navbar-brand" href="#">
-                    <img src="images/logo1.png" alt="WeARit logo featuring stylized text and graphic elements, conveying a modern and energetic brand identity, set against a clean background" width="179" height="55">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo1.png" alt="WeARit logo" width="179" height="55">
                 </a>
-                <form action="" class="col-lg-4 col-md-3">
+                <form class="col-lg-4 col-md-3">
                     <div class="search-box d-flex align-items-center">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <span class="search">
-                            <img src="images/search_1_.png" alt="">
-                        </span>
                     </div>
                 </form>
                 <div>
@@ -58,9 +54,9 @@
                 </div>
             </div>
         </nav>
-        <!-- navbar code end -->
+        <!-- Navbar End -->
 
-        <!-- carousel code start -->
+        <!-- Carousel -->
         <div class="container my-5">
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner rounded">
@@ -129,15 +125,13 @@
                 </button>
             </div>
         </div>
-        <!-- carousel code end -->
+        <!-- Carousel End -->
 
-        <!-- Categories code start -->
+        <!-- Categories -->
         <div class="container px-5">
-            <!-- Section Title -->
             <div class="section-title mb-3">
                 <h1>Categories</h1>
             </div>
-            <!-- Categories Row -->
             <div class="row pb-4">
                 <!-- Watch Category -->
                 <div class="col-lg-4 col-md-6 col-12 my-3">
@@ -165,12 +159,12 @@
                 </div>
             </div>
         </div>
-        <!-- Categories code end -->
+        <!-- Categories End -->
     </header>
 
-    <!-- main code start -->
+    <!-- Main Content -->
     <main class="pt-5" style="background: #f2f2f2;">
-        <!-- shoes start -->
+        <!-- Shoes Section -->
         <section class="container px-5 pb-5" id="shoes">
             <div class="section-title mb-3 pt-5 d-flex align align-items-center justify-content-between">
                 <h1>Shoes</h1>
@@ -217,9 +211,9 @@
                 </div>
             </div>
         </section>
-        <!-- shoes end -->
+        <!-- Shoes end -->
 
-        <!-- backpack start -->
+        <!-- Backpack Section -->
         <section class="container px-5 my-5 pb-5" id="backpack">
             <div class="section-title mb-3 pt-5 d-flex align align-items-center justify-content-between">
                 <h1>Backpack</h1>
@@ -267,9 +261,9 @@
                 </div>
             </div>
         </section>
-        <!-- backpack end -->
+        <!-- Backpack end -->
         
-        <!-- Watch start -->
+        <!-- Watch Section -->
         <section class="container px-5 my-5 pb-5" id="watch">
             <div class="section-title mb-3 pt-5 d-flex align align-items-center justify-content-between">
                 <h1>Watch</h1>
@@ -319,14 +313,14 @@
         </section>
         <!-- Watch end -->
     </main>
-    <!-- footer code start -->
+
+    <!-- Footer -->
     <footer class="mt-5" id="subscribe">
-        <div class="container d-flex flex-column justify-content-center align-items-center my-5"
-            style="background:#FFF2F1; height: 455px">
+        <div class="container d-flex flex-column justify-content-center align-items-center py-4" style="background:#FFF2F1;">
             <div class="text-center">
                 <h1>LET'S STAY IN TOUCH</h1>
                 <p>Get updates on sales specials and more</p>
-                <form action="">
+                <form>
                     <div class="input-group mb-3">
                         <input type="email" class="form-control border-0 px-5 py-1" width="683"
                             placeholder="Enter Your Email">
@@ -338,15 +332,42 @@
                 </form>
             </div>
         </div>
-        <div class="text-center my-4">
+        <div class="text-center my-2">
             <p>
-                Copyright &COPY;
-                <a href="#" style="color:#FF9C35 ;"> KushalBasnet/LimonTarafader 2025</a>
+                Copyright &copy;
+                <a href="index.html" style="color:#FF9C35; text-decoration: none;"> WeArit 2025</a>
             </p>
         </div>
     </footer>
+
+    <!-- Cookie Consent Banner using Bootstrap Alert -->
+    <div id="cookie-banner" class="alert alert-dark alert-dismissible fade show fixed-bottom mb-0 d-flex justify-content-between align-items-center" role="alert" style="display:none; z-index: 1050;">
+      <span>🍪 We use cookies to ensure you get the best experience on WeARit.</span>
+      <button type="button" class="btn btn-warning btn-sm ms-3" id="accept-cookies">Got it!</button>
+    </div>
+
+    <!-- JS Scripts: Bootstrap, Main, Auth -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
     <script src="auth.js"></script>
+    <script>
+      // Cookie banner logic with Bootstrap alert
+      document.addEventListener('DOMContentLoaded', function () {
+        const banner = document.getElementById('cookie-banner');
+        const acceptBtn = document.getElementById('accept-cookies');
+
+        // Show banner only if not accepted before
+        if (!localStorage.getItem('cookiesAccepted')) {
+          banner.style.display = 'flex';
+        }
+
+        acceptBtn.addEventListener('click', () => {
+          localStorage.setItem('cookiesAccepted', 'true');
+          banner.classList.remove('show');
+          banner.style.display = 'none';
+        });
+      });
+    </script>
 </body>
 </html>
