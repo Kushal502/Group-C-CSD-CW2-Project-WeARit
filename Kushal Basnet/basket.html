@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basket - WearIt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            animation: fadeIn 1.5s;
+        }
+        h1 {
+            text-align: center;
+            color: #2d3436;
+        }
+        .product {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            margin: 10px auto;
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 700px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+        .product input {
+            width: 60px;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .product button {
+            background-color: #d63031;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #e74c3c;
+        }
+        .checkout {
+            max-width: 700px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .checkout button {
+            background-color: #0984e3;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .checkout button:hover {
+            background-color: #74b9ff;
+        }
+        select, input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  gap: 10px;
+}
+
+.product input {
+  width: 80px;
+}
+
+@media (max-width: 576px) {
+  .product {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .product input {
+    width: 100%;
+  }
+  .product button {
+    width: 100%;
+  }
+}
+
+    </style>
+    <script>
+        function removeProduct(btn) {
+            btn.parentElement.remove();
+        }
+    </script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="home">
+        
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-light py-3 bg-white fixed-top">
+            <div class="container d-flex justify-content-between">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo1.png" 
+                         alt="WeARit logo featuring stylized text and graphic elements, conveying a modern and energetic brand identity" 
+                         width="179" height="55">
+                </a>
+
+                <!-- Menu -->
+                <div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <!-- END NAVBAR -->
+
+    </header>
+    <!-- END HEADER -->
+
+<main class="container my-5 py-4">
+  <h1 class="text-center mb-4">Your Basket</h1>
+
+  <div class="d-flex flex-column gap-3">
+    <div class="product flex-wrap">
+      <span>Watch</span>
+      <input type="number" value="1" min="1">
+      <button onclick="removeProduct(this)">Remove</button>
+    </div>
+
+    <div class="product flex-wrap">
+      <span>Shoes</span>
+      <input type="number" value="1" min="1">
+      <button onclick="removeProduct(this)">Remove</button>
+    </div>
+
+    <div class="product flex-wrap">
+      <span>Leather Bag</span>
+      <input type="number" value="1" min="1">
+      <button onclick="removeProduct(this)">Remove</button>
+    </div>
+  </div>
+
+  <div class="checkout mt-4">
+    <h2>Checkout</h2>
+    <p>Select Payment Method:</p>
+    <select>
+      <option value="apple pay">Apple Pay</option>
+      <option value="visa">Visa</option>
+      <option value="master card">MasterCard</option>
+      <option value="cod">Cash on Delivery</option>
+    </select><br>
+    <input type="text" placeholder="Enter Mobile/Card Number"><br>
+    <button>Pay Now</button>
+  </div>
+</main>
+
+    <!-- Footer -->
+    <footer class="mt-5" id="subscribe">
+        <div class="text-center my-4">
+            <p>
+                Copyright &COPY;
+                <a href="#" style="color:#FF9C35;">WeArit 2025</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
