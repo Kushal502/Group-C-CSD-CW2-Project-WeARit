@@ -185,3 +185,27 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
   }
 });
+
+<!-- jQuery CDN -->
+$(document).ready(function () {
+    $('form').on('submit', function (e) {
+      e.preventDefault(); // Prevent actual form submission
+
+      // Get form values
+      const name = $('#name').val().trim();
+      const email = $('#email').val().trim();
+      const message = $('#message').val().trim();
+
+      // Simple validation
+      if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+        return;
+    }
+
+    // Simulate form submission (e.g., AJAX or local feedback)
+    alert(`Thank you, ${name}! Your message has been sent.`);
+
+    // Optionally reset form
+$(this)[0].reset();
+});
+});
