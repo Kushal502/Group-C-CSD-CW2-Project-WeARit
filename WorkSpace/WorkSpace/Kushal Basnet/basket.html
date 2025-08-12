@@ -76,35 +76,6 @@
             from {opacity: 0;}
             to {opacity: 1;}
         }
-.product {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  gap: 10px;
-}
-
-.product input {
-  width: 80px;
-}
-
-@media (max-width: 576px) {
-  .product {
-    flex-direction: column;
-    align-items: stretch;
-    text-align: center;
-  }
-  .product input {
-    width: 100%;
-  }
-  .product button {
-    width: 100%;
-  }
-}
-
     </style>
     <script>
         function removeProduct(btn) {
@@ -154,41 +125,37 @@
     </header>
     <!-- END HEADER -->
 
-<main class="container my-5 py-4">
-  <h1 class="text-center mb-4">Your Basket</h1>
+<main class=" mt-6 py-5 d-flex flex-column justify-content-center align-items-center min-vh-100 bg-light">
+    <h1>Your Basket</h1>
 
-  <div class="d-flex flex-column gap-3">
-    <div class="product flex-wrap">
-      <span>Watch</span>
-      <input type="number" value="1" min="1">
-      <button onclick="removeProduct(this)">Remove</button>
+    <div class="product">
+        <span>watch</span>
+        <input type="number" value="1" min="1">
+        <button onclick="removeProduct(this)">Remove</button>
+    </div>
+    <div class="product">
+        <span> Shoes</span>
+        <input type="number" value="1" min="1">
+        <button onclick="removeProduct(this)">Remove</button>
+    </div>
+    <div class="product">
+        <span>Leather Bag</span>
+        <input type="number" value="1" min="1">
+        <button onclick="removeProduct(this)">Remove</button>
     </div>
 
-    <div class="product flex-wrap">
-      <span>Shoes</span>
-      <input type="number" value="1" min="1">
-      <button onclick="removeProduct(this)">Remove</button>
+    <div class="checkout">
+        <h2>Checkout</h2>
+        <p>Select Payment Method:</p>
+        <select>
+            <option value="apple pay">apple pay</option>
+            <option value="visa">visa</option>
+            <option value="master card">MasterCard</option>
+            <option value="cod">Cash on Delivery</option>
+        </select><br>
+        <input type="text" placeholder="Enter Mobile/Card Number"><br>
+        <button>Pay Now</button>
     </div>
-
-    <div class="product flex-wrap">
-      <span>Leather Bag</span>
-      <input type="number" value="1" min="1">
-      <button onclick="removeProduct(this)">Remove</button>
-    </div>
-  </div>
-
-  <div class="checkout mt-4">
-    <h2>Checkout</h2>
-    <p>Select Payment Method:</p>
-    <select>
-      <option value="apple pay">Apple Pay</option>
-      <option value="visa">Visa</option>
-      <option value="master card">MasterCard</option>
-      <option value="cod">Cash on Delivery</option>
-    </select><br>
-    <input type="text" placeholder="Enter Mobile/Card Number"><br>
-    <button>Pay Now</button>
-  </div>
 </main>
 
     <!-- Footer -->
