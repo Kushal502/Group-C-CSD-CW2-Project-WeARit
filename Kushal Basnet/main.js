@@ -135,53 +135,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* ----------------------------------------------------
-   * Sample Product Data (Unsplash Images)
-   * ---------------------------------------------------- */
-  function SAMPLE_PRODUCTS() {
-    return [
-      {
-        id: 'p1',
-        name: 'Reebok Dart Men\'s',
-        price: 1298,
-        short: 'Lightweight running shoe',
-        image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=60'
-      },
-      {
-        id: 'p2',
-        name: 'Mi LED TV 4A PRO 32',
-        price: 1289,
-        short: '32-inch HD LED TV',
-        image: 'https://images.unsplash.com/photo-1585386959984-a415522c70f4?auto=format&fit=crop&w=800&q=60'
-      },
-      {
-        id: 'p3',
-        name: 'Xbox Series X',
-        price: 499.99,
-        short: 'Latest-gen console',
-        image: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=60'
-      },
-      {
-        id: 'p4',
-        name: 'Classic Watch',
-        price: 259.99,
-        short: 'Stylish analog watch',
-        image: 'https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?auto=format&fit=crop&w=800&q=60'
-      },
-      {
-        id: 'p5',
-        name: 'Travel Backpack',
-        price: 129.00,
-        short: 'Durable daypack',
-        image: 'https://images.unsplash.com/photo-1542293787938-c9e299b88033?auto=format&fit=crop&w=800&q=60'
-      },
-      {
-        id: 'p6',
-        name: 'Running Shoes',
-        price: 109.00,
-        short: 'Comfort & performance',
-        image: 'https://images.unsplash.com/photo-1528701800489-4760d1bd5f53?auto=format&fit=crop&w=800&q=60'
-      }
-    ];
-  }
+
+<!-- jQuery CDN -->
+$(document).ready(function () {
+    $('form').on('submit', function (e) {
+      e.preventDefault(); // Prevent actual form submission
+
+      // Get form values
+      const name = $('#name').val().trim();
+      const email = $('#email').val().trim();
+      const message = $('#message').val().trim();
+
+      // Simple validation
+      if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+        return;
+    }
+
+    // Simulate form submission (e.g., AJAX or local feedback)
+    alert(`Thank you, ${name}! Your message has been sent.`);
+
+    // Optionally reset form
+$(this)[0].reset();
+});
 });
